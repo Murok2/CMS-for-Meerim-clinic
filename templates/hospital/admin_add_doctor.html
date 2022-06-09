@@ -10,11 +10,12 @@
 
     .note {
       text-align: center;
-      height: 80px;
-      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
-      color: #fff;
+      height: 120px;
+      background: white;
+      color: #428D45;
       font-weight: bold;
-      line-height: 80px;
+      font-size: 1cm;
+      line-height: 120px;
     }
 
     .form-content {
@@ -33,7 +34,7 @@
       padding: 1%;
       width: 20%;
       cursor: pointer;
-      background: #0062cc;
+      background: #428D45;
       color: #fff;
     }
 
@@ -48,55 +49,49 @@
 
 </head>
 <br><br><br>
-<!------ signup page for doctor by admin(sumit)  ---------->
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   <div class="container register-form">
     <div class="form">
       <div class="note">
-        <p>Add New Doctor To Hospital</p>
+        <p>Добавить нового доктора</p>
       </div>
       <div class="form-content">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+              {% render_field userForm.first_name class="form-control" placeholder="Имя" %}
             </div>
             <div class="form-group">
-              {% render_field userForm.username class="form-control" placeholder="Username" %}
+              {% render_field userForm.username class="form-control" placeholder="Имя пользователя" %}
             </div>
             <div class="form-group">
-              {% render_field doctorForm.department class="form-control" placeholder="Department" %}
+              {% render_field doctorForm.department class="form-control" placeholder="Специальность" %}
             </div>
             <div class="form-group">
-              {% render_field doctorForm.address class="form-control" placeholder="Address" %}
+              {% render_field doctorForm.address class="form-control" placeholder="Адрес" %}
             </div>
 
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+              {% render_field userForm.last_name class="form-control" placeholder=" Фамилия" %}
             </div>
             <div class="form-group">
-              {% render_field userForm.password class="form-control" placeholder="Password" %}
+              {% render_field userForm.password class="form-control" placeholder="Пароль" %}
             </div>
             <div class="form-group">
-              {% render_field doctorForm.mobile class="form-control"  placeholder="Mobile" %}
+              {% render_field doctorForm.mobile class="form-control"  placeholder="Телефон" %}
             </div>
             <div class="form-group">
-              {% render_field doctorForm.profile_pic required="required" class="form-control" placeholder="Profile Picture" %}
+              {% render_field doctorForm.profile_pic required="required" class="form-control" placeholder=" Фотография профиля" %}
             </div>
           </div>
         </div>
-        <button type="submit" class="btnSubmit">Register</button>
+        <button type="submit" class="btnSubmit">Зарегистрировать</button>
       </div>
     </div>
   </div>
 
 </form>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
 {% endblock content %}

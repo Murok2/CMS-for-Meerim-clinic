@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>LazyCoder || sumit</title>
+  <title>CMS</title>
   <style type="text/css">
     body {
       color: #aa082e;
@@ -20,11 +20,12 @@
 
     .note {
       text-align: center;
-      height: 80px;
-      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
-      color: #fff;
+      height: 120px;
+      background: white;
+      color: #428D45;
       font-weight: bold;
-      line-height: 80px;
+      font-size: 1cm;
+      line-height: 120px;
     }
 
     .form-content {
@@ -43,7 +44,7 @@
       padding: 1%;
       width: 20%;
       cursor: pointer;
-      background: #0062cc;
+      background: #428D45;
       color: #fff;
     }
   </style>
@@ -59,66 +60,57 @@
   <br>
 
 
-
-
-  <!--- signup page for patient by admin(sumit)  ---------->
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="container register-form">
       <div class="form">
         <div class="note">
-          <p>Register to Hospital</p>
+          <p>Зарегистрироваться в клинике</p>
         </div>
 
         <div class="form-content">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+                {% render_field userForm.first_name class="form-control" placeholder="Имя" %}
               </div>
               <div class="form-group">
-                {% render_field userForm.username class="form-control" placeholder="Username" %}
+                {% render_field userForm.username class="form-control" placeholder="Имя пользователя" %}
               </div>
               <div class="form-group">
-                {% render_field patientForm.address class="form-control" placeholder="Address" %}
+                {% render_field patientForm.address class="form-control" placeholder="Адрес" %}
               </div>
               <div class="form-group">
-                {% render_field patientForm.symptoms class="form-control" placeholder="Symptoms" %}
+                {% render_field patientForm.symptoms class="form-control" placeholder="Симптомы" %}
               </div>
               <div class="form-group">
-                {% render_field patientForm.profile_pic required="required" class="form-control" placeholder="Profile Picture" %}
+                {% render_field patientForm.profile_pic required="required" class="form-control" placeholder="Фотография" %}
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+                {% render_field userForm.last_name class="form-control" placeholder="Фамилия" %}
               </div>
               <div class="form-group">
-                {% render_field userForm.password class="form-control" placeholder="Password" %}
+                {% render_field userForm.password class="form-control" placeholder="Пароль" %}
               </div>
               <div class="form-group">
-                {% render_field patientForm.mobile class="form-control" pattern="[6789][0-9]{9}" placeholder="Mobile Number" %}
+                {% render_field patientForm.mobile class="form-control" placeholder="Телефон" %}
               </div>
               <div class="form-group">
-                {% render_field patientForm.assignedDoctorId class="form-control" placeholder="Doctor" %}
+                {% render_field patientForm.assignedDoctorId class="form-control" placeholder="Доктор" %}
               </div>
 
             </div>
           </div>
-          <button type="submit" class="btnSubmit">Register</button>
-          <div class="text-center">Already have an account? <a href="patientlogin">Login here</a></div>
+          <button type="submit" class="btnSubmit">Зарегистрироваться</button>
+          <div class="text-center">Аккаунт уже имеется ? <a href="patientlogin">Войти здесь</a></div>
         </div>
       </div>
     </div>
 
   </form>
 
-  {% include "hospital/footer.html" %}
 </body>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
 
 </html>

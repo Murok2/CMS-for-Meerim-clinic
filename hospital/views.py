@@ -551,18 +551,12 @@ def reject_appointment_view(request,pk):
     appointment=models.Appointment.objects.get(id=pk)
     appointment.delete()
     return redirect('admin-approve-appointment')
-#---------------------------------------------------------------------------------
-#------------------------ ADMIN RELATED VIEWS END ------------------------------
-#---------------------------------------------------------------------------------
 
 
 
 
 
 
-#---------------------------------------------------------------------------------
-#------------------------ DOCTOR RELATED VIEWS START ------------------------------
-#---------------------------------------------------------------------------------
 @login_required(login_url='doctorlogin')
 @user_passes_test(is_doctor)
 def doctor_dashboard_view(request):
@@ -681,18 +675,13 @@ def delete_appointment_view(request,pk):
 
 
 
-#---------------------------------------------------------------------------------
-#------------------------ DOCTOR RELATED VIEWS END ------------------------------
-#---------------------------------------------------------------------------------
 
 
 
 
 
 
-#---------------------------------------------------------------------------------
-#------------------------ PATIENT RELATED VIEWS START ------------------------------
-#---------------------------------------------------------------------------------
+
 @login_required(login_url='patientlogin')
 @user_passes_test(is_patient)
 def patient_dashboard_view(request):
@@ -738,7 +727,7 @@ def patient_book_appointment_view(request):
             appointment.doctorId=request.POST.get('doctorId')
             appointment.patientId=request.user.id #----user can choose any patient but only their info will be stored
             appointment.doctorName=models.User.objects.get(id=request.POST.get('doctorId')).first_name
-            appointment.patientName=request.user.first_name #----user can choose any patient but only their info will be stored
+            appointment.patientName=request.user.first_name #----user can choose any patient but only their information will be stored
             appointment.status=False
             appointment.save()
         return HttpResponseRedirect('patient-view-appointment')
@@ -808,19 +797,7 @@ def patient_discharge_view(request):
     return render(request,'hospital/patient_discharge.html',context=patientDict)
 
 
-#------------------------ PATIENT RELATED VIEWS END ------------------------------
-#---------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-#---------------------------------------------------------------------------------
-#------------------------ ABOUT US AND CONTACT US VIEWS START ------------------------------
-#---------------------------------------------------------------------------------
 def aboutus_view(request):
     return render(request,'hospital/aboutus.html')
 
@@ -837,12 +814,4 @@ def contactus_view(request):
     return render(request, 'hospital/contactus.html', {'form':sub})
 
 
-#---------------------------------------------------------------------------------
-#------------------------ ADMIN RELATED VIEWS END ------------------------------
-#---------------------------------------------------------------------------------
 
-
-
-#Developed By : sumit kumar
-#facebook : fb.com/sumit.luv
-#Youtube :youtube.com/lazycoders

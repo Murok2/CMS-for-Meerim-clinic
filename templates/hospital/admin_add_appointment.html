@@ -10,11 +10,12 @@
 
     .note {
       text-align: center;
-      height: 80px;
-      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
-      color: #fff;
+      height: 120px;
+      background: white;
+      color: #428D45;
       font-weight: bold;
-      line-height: 80px;
+      font-size: 1cm;
+      line-height: 120px;
     }
 
     .form-content {
@@ -33,7 +34,7 @@
       padding: 1%;
       width: 20%;
       cursor: pointer;
-      background: #0062cc;
+      background: #428D45;
       color: #fff;
     }
 
@@ -47,40 +48,35 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <br><br>
-<!------ add appointment page by admin(sumit)  ---------->
+
 <form method="post">
   {% csrf_token %}
   <div class="container register-form">
     <div class="form">
       <div class="note">
-        <p>Book Appointment Details</p>
+        <p>Добавить подробное назначение</p>
       </div>
       <div class="form-content">
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
-              {% render_field appointmentForm.description class="form-control" placeholder="Description" %}
+              {% render_field appointmentForm.description class="form-control" placeholder="Детали" %}
             </div>
             <div class="form-group">
-              {% render_field appointmentForm.doctorId class="form-control" placeholder="doctor" %}
+              {% render_field appointmentForm.doctorId class="form-control" placeholder="Доктор" %}
             </div>
             <div class="form-group">
-              {% render_field appointmentForm.patientId class="form-control" placeholder="patient" %}
+              {% render_field appointmentForm.patientId class="form-control" placeholder="Пациент" %}
             </div>
 
           </div>
 
         </div>
-        <button type="submit" class="btnSubmit">Book</button>
+        <button type="submit" class="btnSubmit">Добавить</button>
       </div>
     </div>
   </div>
 </form>
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
 
 {% endblock content %}

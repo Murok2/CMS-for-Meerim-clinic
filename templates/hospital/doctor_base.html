@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>LazyCoder || sumit</title>
+  <title>CMS</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,14 +28,9 @@
     }
 
 
-
-
-    /*---------------------------------------
-       Social section
-    -----------------------------------------*/
     footer {
-      padding: 0px 0px 0px 0px;
-      background-color: black;
+      padding: 100px 0px 50px 0px;
+      background-color: white;
       margin: 0px;
     }
 
@@ -46,9 +41,8 @@
     }
 
     .fa {
-
       font-size: 23px;
-      width: 60px;
+      width: 55px;
       text-align: center;
       text-decoration: none;
       margin: 5px 2px;
@@ -56,28 +50,23 @@
     }
 
     .fa:hover {
-      opacity: 0.5;
+      opacity: 5.5;
       text-decoration: none;
     }
 
     .fa-facebook {
-      background: #3B5998;
+      background: #428D45;
       color: white;
       margin-top: 30px;
     }
 
     .fa-whatsapp {
-      background: #25d366;
-      color: white;
-    }
-
-    .fa-twitter {
-      background: #55ACEE;
+      background: #428D45;
       color: white;
     }
 
     .fa-instagram {
-      background: #125688;
+      background: #428D45;
       color: white;
     }
 
@@ -100,7 +89,7 @@
     }
 
     .menu {
-      background: #5bc995;
+      background: #CAEED1;
       height: 100vh;
       width: 240px;
       position: fixed;
@@ -110,8 +99,8 @@
       outline: none;
     }
     .menu .avatar {
-      background: rgba(0, 0, 0, 0.1);
-      padding: 2em 0.5em;
+      background: #E5F6E8;
+      padding: 3em 0.5em;
       text-align: center;
     }
     .menu .avatar img {
@@ -124,15 +113,17 @@
     .menu .avatar h2 {
       font-weight: normal;
       margin-bottom: 0;
+      font-size: 35px;
+      color: #428D45;
     }
     .menu ul {
       list-style: none;
-      padding: 0.5em 0;
-      margin: 0;
+      padding: 1.5em 0;
+      margin: 10px;
     }
     .menu ul li {
-      padding: 0.5em 1em 0.5em 3em;
-      font-size: 0.95em;
+      padding: 1em 1em 0.5em 4.3em;
+      font-size: 1em;
       font-weight: regular;
       background-repeat: no-repeat;
       background-position: left 15px center;
@@ -273,70 +264,65 @@
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
+ 
   <nav class="menu" tabindex="0">
     <div class="smartphone-menu-trigger"></div>
     <header class="avatar">
       <img src="{% static doctor.profile_pic.url %}" alt="Profile Pic" />
       <br><br>
-      <h6>Doctor</h6>
+      <h6>Доктор</h6>
       <h2>{{request.user.first_name}}</h2>
     </header>
     <ul>
-      <li tabindex="0" class="icon-dashboard"> <a style="color:white; text-decoration:none;" href="/doctor-dashboard"><span>Dashboard</span></a> </li>
-      <li tabindex="0" class="icon-users"> <a style="color:white; text-decoration:none;" href="/doctor-patient"><span>Patient</span></a></li>
-      <li tabindex="0" class="icon-calendar"> <a style="color:white; text-decoration:none;" href="/doctor-appointment"><span>Appointments</span></a></li>
+      <li tabindex="0" class="icon-dashboard"> <a style="color:#428D45; text-decoration:none;" href="/doctor-dashboard"><span>Главная Страница</span></a> </li>
+      <li tabindex="0" class="icon-users"> <a style="color:#428D45; text-decoration:none;" href="/doctor-patient"><span>Пациент</span></a></li>
+      <li tabindex="0" class="icon-calendar"> <a style="color:#428D45; text-decoration:none;" href="/doctor-appointment"><span>Назначения</span></a></li>
     </ul>
   </nav>
   <main>
-    <!-- nav start -->
+   
     <div class="bs-example">
-      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#337AB7;">
-        <a href="/doctor-dashboard" class="navbar-brand">HOSPITAL MANAGEMENT</a>
+      <nav class="navbar navbar-expand-md  navbar-dark " style="background:white;">
+        <a href="/doctor-dashboard" class="navbar-brand" style="color: #428D45; font-size: 1cm; margin-top: 15px; margin-left: 30px;">"BAI" Clinic </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav" style=" margin-left: 90%;">
 
-            <a href="/logout" class="nav-item nav-link">Logout</a>
+            <a href="/logout" class="nav-item nav-link" style="color: #428D45; ">Выйти</a>
           </div>
         </div>
       </nav>
     </div>
-    <!-- nav end -->
+   
     <br><br>
-    <!-- content start-->
+    
     {% block content %}
     {% endblock content %}
-    <!-- content end-->
+    
     <br><br><br><br><br><br><br>
     <footer>
       <p>
-        <a id="ftr" href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
-        <a id="ftr" href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
-        <a id="ftr" href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
-        <a id="ftr" href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
+        <a id="ftr" href="" class="fa fa-facebook"></a>
+        <a id="ftr" href="" class="fa fa-whatsapp"></a>
+        <a id="ftr" href="" class="fa fa-instagram"></a>
       </p>
       <br>
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12">
-            <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-              <p>Made in India <br>
-                Copyright &copy; 2020 LazyCoder </p>
+            <div style="color:#428D45;" class="wow fadeInUp footer-copyright">
+              <p>Жалал-Абад <br>
+                Copyright &copy; 2022 </p>
             </div>
           </div>
         </div>
       </div>
     </footer>
   </main>
-  <!-- partial -->
+ 
 </body>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 
 </html>

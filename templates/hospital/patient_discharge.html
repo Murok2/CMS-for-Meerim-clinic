@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>A simple, clean, and responsive HTML invoice template</title>
+  <title>CMS</title>
 
   <style>
     .invoice-box {
@@ -84,8 +84,6 @@
         text-align: center;
       }
     }
-
-    /** RTL **/
     .rtl {
       direction: rtl;
       font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
@@ -120,14 +118,14 @@
         <table>
           <tr>
             <td class="title">
-              <h1>Hospital Management</h1>
+              <h1>"BAI" Clinic</h1>
             </td>
 
             <td>
 
-              Admit Date: {{admitDate}}<br>
-              Release Date: {{releaseDate}}<br>
-              Days Spent: {{daySpent}}
+              Дата приема: {{admitDate}}<br>
+              Дата выписки: {{releaseDate}}<br>
+              Проведенные дни: {{daySpent}}
             </td>
           </tr>
         </table>
@@ -139,13 +137,13 @@
         <table>
           <tr>
             <td>
-              Patient Name : {{patientName}}<br>
-              Patient Mobile : {{mobile}}<br>
-              Patient Addres : {{address}}<br>
+              Имя пациента : {{patientName}}<br>
+              Телефон пациента : {{mobile}}<br>
+              Адрес пациента : {{address}}<br>
             </td>
 
             <td>
-              Doctor Name :<br>
+              Имя доктора :<br>
               {{assignedDoctorName}}<br>
 
             </td>
@@ -156,7 +154,7 @@
 
     <tr class="heading">
       <td>
-        Disease and Symptoms
+        Болезнь и симптомы
       </td>
       <td>
 
@@ -171,17 +169,17 @@
     </tr>
     <tr class="heading">
       <td>
-        Item
+        Пункт
       </td>
 
       <td>
-        Price
+        Цена
       </td>
     </tr>
 
     <tr class="item">
       <td>
-        Room Charge of {{daySpent}} Days
+        Плата за номер в {{daySpent}} днях
       </td>
 
       <td>
@@ -191,7 +189,7 @@
 
     <tr class="item">
       <td>
-        Doctor Fee
+        Стоимость услуг доктора
       </td>
 
       <td>
@@ -201,7 +199,7 @@
 
     <tr class="item">
       <td>
-        Medicine Cost
+        Стоимость медикаментов
       </td>
 
       <td>
@@ -211,7 +209,7 @@
 
     <tr class="item last">
       <td>
-        Other Charge
+        Другие Расходы
       </td>
 
       <td>
@@ -223,7 +221,7 @@
       <td></td>
 
       <td>
-        Total Rupees : {{total}}
+        Общая цена в сомах : {{total}}
       </td>
     </tr>
 
@@ -231,20 +229,16 @@
 </div>
 <br><br>
 <div class="download">
-  <a style="background:red; width:500px;" href="{% url 'download-pdf' patientId  %}">Download</a>
+  <a style="background: #428D45; width:500px;" href="{% url 'download-pdf' patientId  %}">Скачать</a>
 </div>
 
 
 
 {%else%}
-<h5 style="text-align:center;">You Are Not Discharged By Hospital !</h5>
-<h5 style="text-align:center;">Your Treatment Is Going On !</h5><br><br>
-<h6 style="text-align:center;">When You Will Be Discahrged. You Can Download Invoice.</h6>
+<h5 style="text-align:center;">Вас не выписывают из больницы!</h5>
+<h5 style="text-align:center;">Ваше Лечение Продолжается!</h5><br><br>
+<h6 style="text-align:center;">Когда вас выпишут. Вы можете скачать счет-фактуру.</h6>
 {%endif%}
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 <br><br><br><br><br><br><br><br>
 {% endblock content %}

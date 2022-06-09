@@ -113,14 +113,14 @@
         <table>
           <tr>
             <td class="title">
-              <h1>Hospital Management</h1>
+              <h1>"BAI" Clinic</h1>
             </td>
 
             <td>
 
-              Admit Date: {{admitDate}}<br>
-              Release Date: {{todayDate}}<br>
-              Days Spent: {{day}}
+              Дата приема: {{admitDate}}<br>
+              Дата выписки: {{todayDate}}<br>
+              Проведенные дни: {{day}}
             </td>
           </tr>
         </table>
@@ -132,13 +132,13 @@
         <table>
           <tr>
             <td>
-              Patient Name : {{name}}<br>
-              Patient Mobile : {{mobile}}<br>
-              Patient Addres : {{address}}<br>
+              Имя пациента : {{name}}<br>
+              Телефон пациента : {{mobile}}<br>
+              Адрес пациента : {{address}}<br>
             </td>
 
             <td>
-              Doctor Name :<br>
+              Имя доктора :<br>
               {{assignedDoctorName}}<br>
 
             </td>
@@ -149,7 +149,7 @@
 
     <tr class="heading">
       <td>
-        Disease and Symptoms
+        Болезнь и симптомы
       </td>
       <td>
 
@@ -164,11 +164,11 @@
     </tr>
     <tr class="heading">
       <td>
-        Item
+        Пункт
       </td>
 
       <td>
-        Price
+        Цена
       </td>
     </tr>
     <form method="post">
@@ -176,41 +176,41 @@
 
       <tr class="item">
         <td>
-          Room Charge (Per Day)
+          Плата за номер (Per Day)
         </td>
 
         <td>
-          <input type="number" name="roomCharge" placeholder="In Rupees" value="">
-        </td>
-      </tr>
-
-      <tr class="item">
-        <td>
-          Doctor Fee
-        </td>
-
-        <td>
-          <input type="number" name="doctorFee" placeholder="In Rupees" value="">
+          <input type="number" name="roomCharge" placeholder="В сомах" value="">
         </td>
       </tr>
 
       <tr class="item">
         <td>
-          Medicine Cost
+          Стоимость услуг доктора
         </td>
 
         <td>
-          <input type="number" name="medicineCost" placeholder="In Rupees" value="">
+          <input type="number" name="doctorFee" placeholder="В сомах" value="">
+        </td>
+      </tr>
+
+      <tr class="item">
+        <td>
+          Стоимость медикаментов
+        </td>
+
+        <td>
+          <input type="number" name="medicineCost" placeholder="В сомах" value="">
         </td>
       </tr>
 
       <tr class="item last">
         <td>
-          Other Charge
+          Другие Расходы
         </td>
 
         <td>
-          <input type="number" name="OtherCharge" placeholder="In Rupees" value="">
+          <input type="number" name="OtherCharge" placeholder="В сомах" value="">
         </td>
       </tr>
 
@@ -218,7 +218,7 @@
         <td></td>
 
         <td>
-          <input type="submit" name="submit" value="Generate Bill">
+          <input type="submit" name="submit" value="Посчитать общую сумму">
         </td>
       </tr>
 
@@ -226,10 +226,6 @@
   </table>
 </div>
 
-<!--
-   developed By : sumit kumar
-   facebook : fb.com/sumit.luv
-   youtube : youtube.com/lazycoders
-   -->
+
 
 {% endblock content %}

@@ -21,17 +21,14 @@
     }
   </style>
 </head>
-<!--
-written By : sumit kumar
-facebook : fb.com/sumit.luv
--->
+
 
 
 <div class="container">
 
     <form  action="/searchdoctor" method="get" style="margin-left:70%;" class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" name="query" id="query" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
     </form>
  
 
@@ -44,11 +41,11 @@ facebook : fb.com/sumit.luv
         <thead>
           <tr>
   
-            <th>Name</th>
-            <th>Profile Picture</th>
-            <th>Mobile</th>
-            <th>Address</th>
-            <th>Department</th>
+            <th>Имя</th>
+            <th>Фотография профиля</th>
+            <th>Мобильный Телефон</th>
+            <th>Адрес</th>
+            <th>Специальность</th>
            
           </tr>
         </thead>
@@ -66,15 +63,11 @@ facebook : fb.com/sumit.luv
   </div>
   {%else%}
   <br><br><br>
-  <h4 style="text-align: center;color: red;">No Doctor Found !!!</h4>
+  <h4 style="text-align: center;color: red;">Такого доктора нет</h4>
   {% endif %}
 
 
 </div>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 
 {% endblock content %}

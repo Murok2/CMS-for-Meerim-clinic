@@ -14,10 +14,11 @@
   <style type="text/css">
     a:link {
       text-decoration: none;
+      
     }
 
     .menu {
-      top: 50px;
+      top: 0px;
     }
 
     h6 {
@@ -29,46 +30,51 @@
     }
 
     .bg-c-blue {
-      background: linear-gradient(45deg, #4099ff, #73b4ff);
+      background: linear-gradient(45deg, #73D28E, #428D45);
     }
 
     .bg-c-green {
-      background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+      background: linear-gradient(45deg, #73D28E, #428D45);
     }
 
     .bg-c-yellow {
-      background: linear-gradient(45deg, #FFB64D, #ffcb80);
+      background: linear-gradient(45deg, #73D28E, #428D45);
     }
 
     .bg-c-pink {
-      background: linear-gradient(45deg, #FF5370, #ff869a);
+      background: linear-gradient(45deg, #73D28E, #428D45);
     }
 
 
     .card {
-      border-radius: 5px;
+      border-radius: 15px;
+      border-style: dotted;
+      border-color: black;
+      
       -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
       box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
       border: none;
-      margin-bottom: 30px;
+      margin-bottom: 0px;
+      margin-top: 50px;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
+
     }
 
     .card .card-block {
-      padding: 25px;
+      padding: 20px;
     }
 
     .order-card i {
-      font-size: 26px;
+      font-size: 30px;
     }
 
     .f-left {
-      float: left;
+      float: top;
     }
 
     .f-right {
-      float: right;
+      float: bottom;
     }
   </style>
 </head>
@@ -80,7 +86,7 @@
       <div class="card bg-c-blue order-card">
         <div class="card-block">
           <a href="/admin-view-doctor">
-            <h6 class="m-b-20">Doctor Record</h6>
+            <h6 class="m-b-20">Записи врача</h6>
           </a>
           <br>
           <h2 class="text-right"><i class="fas fa-user-nurse f-left"></i></h2>
@@ -93,7 +99,7 @@
       <div class="card bg-c-green order-card">
         <div class="card-block">
           <a href="/admin-add-doctor">
-            <h6 class="m-b-20">Register Doctor</h6>
+            <h6 class="m-b-20">Зарегистрировать доктора</h6>
           </a>
           <br>
           <h2 class="text-right"><i class="fas fa-user-plus f-left"></i></h2>
@@ -105,7 +111,7 @@
       <div class="card bg-c-yellow order-card">
         <div class="card-block">
           <a href="/admin-approve-doctor">
-            <h6 class="m-b-20">Approve Doctor</h6>
+            <h6 class="m-b-20">Одобрить доктора</h6>
           </a>
           <br>
           <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
@@ -117,7 +123,7 @@
       <div class="card bg-c-pink order-card">
         <div class="card-block">
           <a href="/admin-view-doctor-specialisation">
-            <h6 class="m-b-20">Doctor Specialisation</h6>
+            <h6 class="m-b-20"> Специализация доктора</h6>
           </a>
           <br>
           <h2 class="text-right"><i class="fas fa-user-md f-left"></i></h2>
@@ -126,10 +132,5 @@
     </div>
   </div>
 </div>
-<!--
-  developed By : sumit kumar
-  facebook : fb.com/sumit.luv
-  youtube : youtube.com/lazycoders
-  -->
 <br><br><br><br><br><br><br>
 {% endblock content %}

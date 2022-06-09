@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en" dir="ltr">
+<html lang="ru" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>LazyCoder || sumit</title>
+  <title>CMS</title>
   <style media="screen">
-    .jumbotron {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
+  .wrapper-about-us{
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper-about-us h1{
+    font-family: Montserrat;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #428D45;
+    display: flex;
+    justify-content: center;
+  }
 
-    .jumbotron h1 {
-      text-align: center;
-    }
-
-    .alert {
-      margin: 0px;
-    }
+  .info-about-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .info-about-us ul{
+    width: 50%;
+    font-family: Montserrat;
+  }
+  .info-about-us img{
+    width: 229px;
+    height: 211px;
+  }
   </style>
-  <title>sumit</title>
+  <title></title>
 </head>
 
 <body>
   {% include "hospital/navbar.html" %}
   <br><br>
-  <center>
-    <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
-  </center>
-  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
-    <h1 class="display-4">Hello</h1>
-    <p class="lead">A service dedicated to Hospital Admin, Doctor and Patient.</p>
-    <hr class="my-4">
-    <p>Explore our Website.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
-    </p>
-  </div>
+  <div className="wrapper-about-us">
+    <h1> О нашей клинике</h1>
+    <div className="info-about-us">
+    <ul>
+      <li>Наша клиника находится в центре города<br/> 
+       Жалал-Абад</li>
+      <li>В клинике используют только самые прогрессивные методы диагностики и лечения<br/>
+      Современные медицинские подразделения, новейшие технологии, опытные специалисты</li>
+      <li>В клинике используют только самые прогрессивные методы диагностики и лечения<br/>
+      Современные медицинские подразделения, новейшие технологии, опытные специалисты</li>
+      <li>Каждый человек может получить качественное и недорогое лечение <br/>
+      Экосистема здравоохранения для безопасности и комфорта пациентов<br/>
+      Комфортные условия</li>
+    </ul>
+
+    <img src={doctors} />
+     
+    </div>
+</div>
   {% include "hospital/footer.html" %}
 </body>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
 
 </html>

@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>A simple, clean, and responsive HTML invoice template</title>
+  <title>CMS</title>
 
   <style>
     .invoice-box {
@@ -85,7 +85,7 @@
       }
     }
 
-    /** RTL **/
+ 
     .rtl {
       direction: rtl;
       font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
@@ -118,14 +118,14 @@
         <table>
           <tr>
             <td class="title">
-              <h1>Hospital Management</h1>
+              <h1>"BAI" Clinic</h1>
             </td>
 
             <td>
 
-              Admit Date: {{admitDate}}<br>
-              Release Date: {{todayDate}}<br>
-              Days Spent: {{day}}
+              Дата приема: {{admitDate}}<br>
+              Дата выписки: {{todayDate}}<br>
+              Проведенные дни: {{day}}
             </td>
           </tr>
         </table>
@@ -137,13 +137,13 @@
         <table>
           <tr>
             <td>
-              Patient Name : {{name}}<br>
-              Patient Mobile : {{mobile}}<br>
-              Patient Addres : {{address}}<br>
+              Имя пациента : {{name}}<br>
+              Телефон пациента : {{mobile}}<br>
+              Адрес пациента : {{address}}<br>
             </td>
 
             <td>
-              Doctor Name :<br>
+              Имя доктора :<br>
               {{assignedDoctorName}}<br>
 
             </td>
@@ -154,7 +154,7 @@
 
     <tr class="heading">
       <td>
-        Disease and Symptoms
+        Болезнь и симптомы
       </td>
       <td>
 
@@ -169,17 +169,17 @@
     </tr>
     <tr class="heading">
       <td>
-        Item
+        Пункт
       </td>
 
       <td>
-        Price
+        Цена
       </td>
     </tr>
 
     <tr class="item">
       <td>
-        Room Charge of {{day}} Days
+        Плата за номер в {{day}} днях
       </td>
 
       <td>
@@ -189,7 +189,7 @@
 
     <tr class="item">
       <td>
-        Doctor Fee
+        Стоимость услуг доктора
       </td>
 
       <td>
@@ -199,7 +199,7 @@
 
     <tr class="item">
       <td>
-        Medicine Cost
+        Стоимость медикаментов
       </td>
 
       <td>
@@ -209,7 +209,7 @@
 
     <tr class="item last">
       <td>
-        Other Charge
+        Другие Расходы
       </td>
 
       <td>
@@ -221,7 +221,7 @@
       <td></td>
 
       <td>
-        Total Rupees : {{total}}
+        Общая цена в сомах : {{total}}
       </td>
     </tr>
 
@@ -229,12 +229,8 @@
 </div>
 <br><br>
 <div class="download">
-  <a style="background:red; width:500px;" href="{% url 'download-pdf' patientId  %}">Download</a>
+  <a style="background:#428D45; width:500px;" href="{% url 'download-pdf' patientId  %}">Скачать</a>
 </div>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 
 {% endblock content %}

@@ -11,7 +11,7 @@
     .note {
       text-align: center;
       height: 80px;
-      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      background: -webkit-linear-gradient(left, #73D28E, #428D45);
       color: #fff;
       font-weight: bold;
       line-height: 80px;
@@ -33,7 +33,7 @@
       padding: 1%;
       width: 20%;
       cursor: pointer;
-      background: #0062cc;
+      background: #428D45;
       color: #fff;
     }
 
@@ -56,22 +56,21 @@
 {% endif %}
 
 
-<!------ add appointment page by patient(sumit)  ---------->
 <form method="post">
   {% csrf_token %}
   <div class="container register-form">
     <div class="form">
       <div class="note">
-        <p>Book Appointment Details</p>
+        <p>Записаться На Прием Подробнее</p>
       </div>
       <div class="form-content">
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
-              {% render_field appointmentForm.description class="form-control" placeholder="Description" %}
+              {% render_field appointmentForm.description class="form-control" placeholder="Характеристика" %}
             </div>
             <div class="form-group">
-              {% render_field appointmentForm.doctorId class="form-control" placeholder="doctor" %}
+              {% render_field appointmentForm.doctorId class="form-control" placeholder="Доктор" %}
             </div>
             
 
@@ -80,16 +79,12 @@
           </div>
 
         </div>
-        <button type="submit" class="btnSubmit">Book</button>
+        <button type="submit" class="btnSubmit">Забронировать</button>
       </div>
     </div>
   </div>
 </form>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 
 
 {% endblock content %}

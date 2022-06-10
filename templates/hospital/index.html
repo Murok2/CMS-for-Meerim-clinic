@@ -7,17 +7,22 @@
 
 
 <head>
-  <style media="screen">
+  <style media="screen" >
     .jumbotron {
       margin-top: 0px;
       margin-bottom: 0px;
-      background-size: cover;
+      background-size: 25cm;
+      background-position-x: 0cm;
+      background-position-y: 0cm;
+      background-image: url('{% static "images/bg.png" %}');
       background-repeat: no-repeat;
     }
 
     .jumbotron h5,
     h3 {
-      text-align: center;
+      text-align-last: right;
+      margin-left: 24.5cm;
+      color: #428D45;
     }
 
 
@@ -36,6 +41,8 @@
       animation: glow 1s ease-in-out infinite alternate;
     }
 
+  
+
     
   </style>
 </head>
@@ -45,6 +52,7 @@
 <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
   <br>
   <h5 class="display-3 glow"> Медицинский центр, которому вы можете доверить свою жизнь!</h5>
+  
   <br><br><br><br><br>
   <p>
 

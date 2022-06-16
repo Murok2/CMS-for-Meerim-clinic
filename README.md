@@ -5,9 +5,9 @@ IT products in the field of public health protection are growing day by day all 
 
 # Project launch
 
-py manage.py makemigrations
-py manage.py migrate
-py manage.py runserver
+- py manage.py makemigrations
+- py manage.py migrate
+- py manage.py runserver
 
 Then enter following URL
 http://127.0.0.1:8000/

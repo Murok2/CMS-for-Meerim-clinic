@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CMS</title>
+  <style type="text/css">
+    body {
+      color: #aa082e;
+      background-color: #b6bde7;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 120px;
+      background: white;
+      color: #428D45;
+      font-weight: bold;
+      font-size: 1cm;
+      line-height: 120px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #428D45;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>Зарегистрироваться в клинике</p>
+        </div>
+
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                {% render_field userForm.first_name class="form-control" placeholder="Имя" %}
+              </div>
+              <div class="form-group">
+                {% render_field userForm.username class="form-control" placeholder="Имя пользователя" %}
+              </div>
+              <div class="form-group">
+                {% render_field doctorForm.department class="form-control" placeholder="Специальность" %}
+              </div>
+              <div class="form-group">
+                {% render_field doctorForm.address class="form-control" placeholder="Адрес" %}
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                {% render_field userForm.last_name class="form-control" placeholder="Фамилия" %}
+              </div>
+              <div class="form-group">
+                {% render_field userForm.password class="form-control" placeholder="Пароль" %}
+              </div>
+              <div class="form-group">
+                {% render_field doctorForm.mobile class="form-control"  placeholder="Телефон" %}
+              </div>
+              <div class="form-group">
+                {% render_field doctorForm.profile_pic required="required" class="form-control" placeholder="Фотография" %}
+              </div>
+
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Зарегистрироваться</button>
+          <div class="text-center">Аккаунт уже имеется? <a href="doctorlogin">Войти здесь</a></div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+</body>
+</html>

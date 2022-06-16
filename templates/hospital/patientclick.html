@@ -1,0 +1,29 @@
+{% extends 'hospital/homebase.html' %}
+
+
+{% block content %}
+
+<style>
+  .jumbotron{
+    background-color: white ;
+  }
+
+  p{
+    font-style: oblique;
+  }
+</style>
+
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom:0px; ">
+  <h1 class="display-4" style="text-align:center; color: black; font-style: oblique">Здравствуйте, пациент</h1>
+  <p class="lead" style="color: black; font-style: oblique; font-size: 45px;">Добро пожаловать на сайт клиники "BAI" Clinic.</p>
+  <p>Вы можете получить доступ к различным функциям после входа в систему/регистрации.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" style = "background-color:#428D45; margin-top: 1cm;" href="/patientsignup" role="button">Зарегистрироваться</a>
+    <a class="btn btn-primary btn-lg" style = "background-color:#428D45; margin-top: 1cm;" href="/patientlogin" role="button">Войти</a>
+  </p>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CMS</title>
+  
+  <style media="screen">
+  .wrapper-about-us{
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper-about-us h1{
+    font-family: Montserrat;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #428D45;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-about-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .info-about-us ul{
+    width: 50%;
+    font-family: Montserrat;
+  }
+  .info-about-us img{
+    width: 229px;
+    height: 211px;
+  }
+
+  h1{
+    color: #428D45;
+    text-align: center;
+    padding-top: 2cm;
+    padding-bottom: 1cm;
+  }
+  ul{
+    color: #7aa582;
+    display: grid;
+    text-align: center;
+    font-size: larger;
+
+  }
+  </style>
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br><br>
+  <div className="wrapper-about-us">
+    <h1> О нашей клинике</h1>
+    <div className="info-about-us">
+    <ul>
+      - Наша клиника находится в центре города Жалал-Абад<br/>
+      - В клинике используют только самые прогрессивные методы диагностики и лечения<br/>
+      - Современные медицинские подразделения, новейшие технологии, опытные специалисты <br/>
+      - Каждый человек может получить качественное и недорогое лечение <br/>
+      - Экосистема здравоохранения для безопасности и комфорта пациентов<br/>
+      - Комфортные условия
+    </ul>
+  </div>
+</div>
+
+<div className="wrapper-servises">
+  <h1>Услуги</h1>
+  <div className="services-photo" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; padding: 20px 40px; justify-content: center; justify-items: center; 
+  ">
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo1.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo2.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo3.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo4.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo5.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo6.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo7.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo8.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo9.jpg"/>
+    <img style="width: 600px; height: 580px;" src="../../static/images/photo10.jpg"/>
+  </div>
+
+</div>
+  
+{% include "hospital/footer.html" %}
+</body>
+
+</html>
